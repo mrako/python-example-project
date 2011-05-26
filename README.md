@@ -10,7 +10,7 @@ This project is an example for a python command-line application structure with 
 
         sudo port install py26-nose
 
-In the case of **Error: The following dependencies were not installed: py26-distribute** first run
+In the case of **"Error: The following dependencies were not installed: py26-distribute"** first run
 
         sudo port -f activate py26-distribute
 
