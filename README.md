@@ -14,10 +14,10 @@ In the case of **"Error: The following dependencies were not installed: py26-dis
 
         sudo port -f activate py26-distribute
 
-## Testing
-
-        nosetests
-
 ## Running the Application
 
         bin/project [arguments]
+
+## Testing
+
+        nosetests
