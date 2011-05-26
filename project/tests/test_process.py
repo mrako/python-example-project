@@ -1,4 +1,4 @@
-import os, unittest
+import unittest
 
 from lib import Process, ProcessException
 
