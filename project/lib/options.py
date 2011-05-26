@@ -6,7 +6,7 @@ class Options:
     self._init_parser()
     
   def _init_parser(self):
-    usage = 'Usage %prog'
+    usage = 'bin/project'
     self.parser = OptionParser(usage=usage)
     self.parser.add_option('-x', '--example', default='example-value', dest='example', help='An example option')
   
