@@ -1,11 +1,14 @@
-
 from optparse import OptionParser
 
-def parse(args = None):
-    usage = 'Usage %prog'
-    parser = OptionParser(usage=usage)
-    parser.add_option('-t', '--target', default='ubuntu', dest='target', help='The target name for the virtual server')
-    parser.add_option('-d', '--distribution', default='hardy', dest='distribution', help='The distribution that is cloned for testing')
+class Options:
+
+  def __init__(self):
+    self._init_parser()
     
-    options, args = parser.parse_args(args)
-    return options, args
+  def _init_parser(self):
+    usage = 'Usage %prog'
+    self.parser = OptionParser(usage=usage)
+    self.parser.add_option('-x', '--example', default='example-value', dest='example', help='An example option')
+  
+  def parse(self, args = None):
+    return self.parser.parse_args(args)
