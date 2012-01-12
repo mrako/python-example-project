@@ -2,7 +2,7 @@
 
 This project is an example for a python command-line application structure with a unit testing framework
 
-## Prerequirements
+## Prerequisites
 
 * [nose](http://code.google.com/p/python-nose/)
 
@@ -12,8 +12,9 @@ This project is an example for a python command-line application structure with 
 
 ## Running the Application
 
-        bin/project [arguments]
+        bin/sonar-update [arguments]
 
 ## Testing
 
+        cd runner
         nosetests
