@@ -4,15 +4,11 @@ This project is an example for a python command-line application structure with 
 
 ## Prerequirements
 
-* [nose](http://somethingaboutorange.com/mrl/projects/nose/1.0.0/)
+* [nose](http://code.google.com/p/python-nose/)
 
 ### Installation on OSX
 
-        sudo port install py26-nose
-
-In the case of **"Error: The following dependencies were not installed: py26-distribute"** first run
-
-        sudo port -f activate py26-distribute
+        sudo easy_install nose
 
 ## Running the Application
 
