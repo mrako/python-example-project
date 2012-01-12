@@ -4,12 +4,12 @@ from lib import Options
 from lib import Project
 
 class MockProcess:
-  
+
   def __init__(self):
-    self.command = ""
-  
+    self.commands = []
+
   def execute(self, command):
-    self.command = command
+    self.commands.append(command)
 
 
 
@@ -29,4 +29,4 @@ class TestProject(unittest.TestCase):
   def test_machine_should_get_date(self):
     self.machine.date()
     
-    self.assertEquals(self.mock_process.command, "date")
+    self.assertTrue("date" in self.mock_process.commands)
