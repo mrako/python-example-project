@@ -1,4 +1,5 @@
 import subprocess
+import shlex
 
 class Process:
 
@@ -6,7 +7,7 @@ class Process:
         pass
 
     def execute(self, command):
-        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+        process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         out, err = process.communicate()
         if process.returncode:
             raise ProcessException(process.returncode)

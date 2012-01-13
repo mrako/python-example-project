@@ -7,7 +7,6 @@ class TestProject(unittest.TestCase):
     def _default_options(self):
         options = Options()
         opts, args = options.parse()
-
         return opts
 
     def setUp(self):
