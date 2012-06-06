@@ -18,5 +18,5 @@ This project is an example for a python command-line application structure with 
 
 ## Testing
 
-        cd runner
+        cd project
         nosetests
