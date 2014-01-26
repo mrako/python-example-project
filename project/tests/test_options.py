@@ -2,6 +2,7 @@ import unittest
 
 from lib import Options
 
+
 class TestCommandLineParameters(unittest.TestCase):
 
     def setUp(self):
