@@ -11,3 +11,6 @@ class Project:
 
     def _get_date(self):
         print self.process.execute("date")
+
+    def print_example_arg(self):
+        print self.options.example
