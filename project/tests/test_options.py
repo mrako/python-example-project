@@ -8,14 +8,14 @@ class TestCommandLineParameters(unittest.TestCase):
         self.options = Options()
 
     def test_defaults_options_are_set(self):
-        opts, args = self.options.parse()
+        opts = self.options.parse()
         self.assertEquals(opts.example, 'example-value')
 
     def test_options_example_is_set(self):
-        opts, args = self.options.parse(['-x', 'foobar'])
+        opts = self.options.parse(['-x', 'foobar'])
         self.assertEquals(opts.example, 'foobar')
 
-        opts, args = self.options.parse(['--example', 'not-a-foobar'])
+        opts = self.options.parse(['--example', 'not-a-foobar'])
         self.assertEquals(opts.example, 'not-a-foobar')
 
 
