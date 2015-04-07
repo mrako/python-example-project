@@ -1,4 +1,6 @@
 #!/bin/bash
 
 BINPATH=`dirname $0`
+echo $BINPATH
+echo $BINPATH/../project/main.py
 python "$BINPATH/../project/main.py" $@

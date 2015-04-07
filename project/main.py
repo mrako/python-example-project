@@ -1,7 +1,7 @@
 import sys
 
-from lib import Project
-from lib import Options
+from lib.project import Project
+from lib.options import Options
 
 if __name__ == '__main__':
     options = Options()

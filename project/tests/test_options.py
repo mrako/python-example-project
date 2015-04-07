@@ -1,6 +1,6 @@
 import unittest
 
-from lib import Options
+from project.lib.options import Options
 
 
 class TestCommandLineParameters(unittest.TestCase):

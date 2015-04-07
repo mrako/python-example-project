@@ -1,6 +1,6 @@
-import subprocess
-import shlex
-
+# External
+import subprocess # module for running subprocesses from python
+import shlex # lexical analysis for splitting command like shell
 
 class Process:
 
