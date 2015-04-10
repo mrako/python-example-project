@@ -1,12 +1,14 @@
 #!/bin/bash
 
+# The path that is executed to this file
 BINPATH=`dirname $0`
+# The path where the execution takes place
 PREFIX=`pwd`
+# Stripping leading ./
 BINPATH=`python -c "print '$BINPATH'.split('/', 1)[1]"`
-BINPATH=`python -c "print '$BINPATH'.rpartition('/')[0]"`
-export PYTHONPATH=$PREFIX/$BINPATH
-echo "pythonpath: "$PYTHONPATH
-echo `python -c "from project.lib import options"`
-
+# Stripping tailing /bin
+PROJECTPATH=`python -c "print '$BINPATH'.rpartition('/')[0]"`
+# Adding ../project abspath to pythonpath
+export PYTHONPATH=$PREFIX/$PROJECTPATH
 # $@ passes all the args that were received
 python -m project $@
