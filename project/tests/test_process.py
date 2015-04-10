@@ -1,6 +1,6 @@
 import unittest
 
-from project.lib.process import Process, ProcessException
+from project.lib import Process, ProcessException
 
 
 class TestProcess(unittest.TestCase):
@@ -9,7 +9,6 @@ class TestProcess(unittest.TestCase):
         self.process = Process()
 
     def test_should_execute_successfully(self):
-        # Ehheh
         self.assertEquals(self.process.execute("echo test"), "test\n")
 
     def test_should_raise_exception_on_failed_execution(self):

@@ -9,7 +9,7 @@ class Options:
     def _init_parser(self):
         # overrides usage that is by default something like:
         # usage: PROG [-h] [--foo [FOO]] bar [bar ...]
-        usage = 'bin/project'
+        usage = './bin/run_project'
         self.parser = ArgumentParser(usage=usage)
         # inits the argparser with an argument 'example' with
         # a default value 'example-value'
@@ -20,7 +20,7 @@ class Options:
                                  help='An example option') # specifies help message 
 
     def parse(self, args=None):
-        # parses args, returns a Namespace object
-        # containing the example arg + parameter args
-        # May not support kwargs like -x
-        return self.parser.parse_args(args)
+        # parse known args, returns a Namespace object
+        # unknown args are ignored
+        # Parse known args returns (Namespace_of_known, list_of_unknown)
+        self.known, self.unknown = self.parser.parse_known_args(args)[:]

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# The path that is executed to this file
+BINPATH=`dirname $0`
+# The path where the execution takes place
+PREFIX=`pwd`
+# Stripping leading ./
+BINPATH=`python -c "print '$BINPATH'.split('/', 1)[1]"`
+# Stripping tailing /bin
+PROJECTPATH=`python -c "print '$BINPATH'.rpartition('/')[0]"`
+# Adding ../project abspath to pythonpath
+export PYTHONPATH=$PREFIX/$PROJECTPATH
+# Debug print for pythonpath
+#echo "pythonpath: "$PYTHONPATH
+
+# run all tests inside the tests-packet
+nosetests project.tests

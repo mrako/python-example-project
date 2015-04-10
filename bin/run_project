@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BINPATH=`dirname $0`
+PREFIX=`pwd`
+BINPATH=`python -c "print '$BINPATH'.split('/', 1)[1]"`
+BINPATH=`python -c "print '$BINPATH'.rpartition('/')[0]"`
+export PYTHONPATH=$PREFIX/$BINPATH
+echo "pythonpath: "$PYTHONPATH
+echo `python -c "from project.lib import options"`
+
+# $@ passes all the args that were received
+python -m project $@
