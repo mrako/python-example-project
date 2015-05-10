@@ -5,11 +5,12 @@ BINPATH=`dirname $0`
 # The path where the execution takes place
 PREFIX=`pwd`
 # Stripping leading ./
-BINPATH=`python -c "print '$BINPATH'.split('/', 1)[1]"`
+echo $BINPATH
+BINPATH=`python -c "print '' if '$BINPATH'=='.' else '$BINPATH'.split('/', 1)[1]"`
 WHOLEPATH=$PREFIX/$BINPATH
 # Stripping tailing /bin
 WHOLEPATH=`python -c "print '$WHOLEPATH'.split('/bin')[0]"`
-echo 'Processed WHOLEPATH: '$WHOLEPATH
+#echo 'Processed WHOLEPATH: '$WHOLEPATH
 # Adding ../project abspath to pythonpath
 export PYTHONPATH=$WHOLEPATH
 # run all tests inside the tests-packet
