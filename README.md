@@ -14,9 +14,8 @@ This project is an example for a python command-line application structure with 
 
 ## Running the Application
 
-        bin/project [arguments]
+        python project [arguments]
 
 ## Testing
 
-        cd project
-        nosetests
+        python project/tests

@@ -24,3 +24,5 @@ class Options:
         # unknown args are ignored
         # Parse known args returns (Namespace_of_known, list_of_unknown)
         self.known, self.unknown = self.parser.parse_known_args(args)[:]
+        if len(self.unknown) != 0:
+            print '*WARN* Unknown args received: '+repr(self.unknown)
