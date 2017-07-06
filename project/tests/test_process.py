@@ -1,6 +1,6 @@
 import unittest
 
-from lib import Process, ProcessException
+from project.lib import Process, ProcessException
 
 
 class TestProcess(unittest.TestCase):
@@ -15,3 +15,6 @@ class TestProcess(unittest.TestCase):
         self.assertRaises(ProcessException,
                           self.process.execute,
                           "sh -c 'return 1'")
+
+if __name__ == '__main__':
+    unittest.main()
