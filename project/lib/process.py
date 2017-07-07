@@ -16,7 +16,6 @@ class Process:
             raise ProcessException(process.returncode)
         return out
 
-
 class ProcessException(Exception):
 
     def __init__(self, value):

@@ -1,6 +1,5 @@
 from argparse import ArgumentParser
 
-
 class Options:
 
     def __init__(self):
