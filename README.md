@@ -1,21 +1,16 @@
 ## Introduction
 
-This project is an example for a python command-line application structure with a unit testing framework
+This project is an example for a python command-line application structure with a unit testing framework.
 
 ## Prerequisites
 
-* [nose](http://code.google.com/p/python-nose/)
-* [mockito](http://code.google.com/p/mockito-python/)
-
-### Installation on OSX
-
-        sudo easy_install nose
-        sudo easy_install mockito
+* [docker](https://www.docker.com/)
 
 ## Running the Application
 
-        python project [arguments]
+    docker-compose build
+    docker-compose run project <command line arguments>
 
 ## Testing
 
-        python project/tests
+    docker-compose run test
